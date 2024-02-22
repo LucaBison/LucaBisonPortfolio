@@ -2,196 +2,139 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Luca Bison</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Luca Bison</title>
 </head>
 
 <body>
-  <div id="container">
-    <div id="enlargedImage"></div>
-    <header id="header">
-      <div id="p6">Portfolio | Luca Bison</div>
-      <div id="p5">lucabison.lb@gmail.com <br>+39 340 214 89 19</div>
-    </header>
-    <div id="firstSection">
-      <div id="leftComponent1">
-        <div id="p1">CIAO! SONO LUCA</div>
-        <div id="p2">Junior 3D artist </div>
-        <div class="p3Light" id="p3">Tramite il design, la modellazione e lo sviluppo di siti 3D, Videogames o semplici
-          Render, voglio creare
-          prodotti efficienti ed originali</div>
-        <div class="p3Light" id="p4">Creare esperienze nuove e coinvolgenti, sia nel game design che nel mondo della
-          comunicazione è ciò che mi
-          spinge ogni giorno a migliorare.</div>
-      </div>
-      <div id="rightComponent1">
-        <img src="images/360.png" alt="" style="position: absolute; top: 40px; left: 70px; width: 50px; height: 50px;">
-        <p style="position: absolute; top: 70px; left: 60px; font-family: Poppins; font-weight: 500;">Rotate Me!</p>
-        <canvas id="canvas"></canvas>
-      </div>
+    <div id="container">
+        <div id="blackScreen"></div>
+        <header>
+            <p>Portfolio | Luca Bison</p>
+            <p>lucabison.lb@gmail.com <br>
+                +39 340 214 89 19</p>
+        </header>
+        <div id="div1">
+            <section id="textSection1">
+                <h1>CIAO! SONO LUCA</h1>
+                <h2>Junior 3D artist</h2>
+                <h3>Tramite il design, la modellazione e lo sviluppo di siti 3D, Videogames o semplici Render,
+                    voglio
+                    creare prodotti efficienti ed originali.
+                </h3>
+                <h3>Creare esperienze nuove e coinvolgenti, sia nel game design che nel mondo della comunicazione è
+                    ciò
+                    che mi spinge ogni giorno a migliorare.
+                </h3>
+            </section>
+            <section id="canvasSection1">
+                <canvas id="canvas1"></canvas>
+                <img src="images/rotation.png" alt="">
+                <p>Rotate Me!</p>
+            </section>
+        </div>
+        <div id="div2">
+            <section id="textSection2">
+                <h4>Il primo approccio...</h4>
+                <h5>MESH LOW POLY</h5>
+                <h6>Questi primi progetti rappresentano le fondamenta del mio percorso, dove ho imparato a
+                    manipolare
+                    forme
+                    e texture, diventando familiare con l’interfaccia di Blender.</h6>
+            </section>
+            <section id="imageSection2">
+                <img src="images/lowpoly.png" alt="">
+                <p class="tagWhite">Game Assets - Taverna</p>
+            </section>
+        </div>
+        <div id="div3">
+            <section>
+                <h5>CREAZIONE DI SCENARI PIÙ COMPLESSI</h5>
+                <div id="slider">
+                    <div class="sliderElement">
+                        <img src="images/palafitta.png" alt="">
+                        <p class="tagBlack">Low Poly - Palafitta</p>
+                    </div>
+                    <div class="sliderElement">
+                        <img src="images/forgeWorkbench.jpg" alt="">
+                        <p class="tagBlack">Game Assets - Forgia Nanica</p>
+                    </div>
+                    <div class="sliderElement">
+                        <img src="images/forgeCyc.jpg" alt="">
+                        <p class="tagBlack">Game Assets - Forgia Nanica Textured</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="div4">
+            <section id="textSection4">
+                <h4>Primi progetti...</h4>
+                <h5>HIGH POLY MESH</h5>
+                <h6>Dopo aver sperimentato con i modelli low poly, il mio prossimo passo è stato immergermi nella
+                    creazione
+                    di oggetti molto più dettagliati,
+                    come questa replica del mio PC. Un modo per affinare le mie abilità nella modellazione, aprendo
+                    la
+                    strada a una nuova sperimentazione.
+                </h6>
+            </section>
+            <section id="imageSection4">
+                <div id="enlargedImage"></div>
+                <img src="images/PC3-HR.jpg" alt="" class="imagePc">
+                <img src="images/pc.jpg" alt="" class="imagePc">
+                <img src="images/pc2.jpg" alt="" class="imagePc">
+            </section>
+            <p class="tagWhite">High Poly - PC da gaming</p>
+            <div id="clickMe">
+                <img src="images/click.png" alt="">
+                <p>Try to Click</p>
+            </div>
+        </div>
+        <div id="div5">
+            <section id="imageSection5">
+                <img src="images/materials.png" alt="">
+                <p class="tagBlack">Materials Test - Plastica, Tessuto, Vernice, Vetro</p>
+            </section>
+            <section id="textSection5">
+                <h5>MATERIALI</h5>
+                <h6>Successivamente, sono passato alla creazione di materiali custom, per realizzare in modo ancora più
+                    personalizzato e fedele i miei progetti.</h6>
+            </section>
+        </div>
+        <div id="div6">
+            <section id="textSection6">
+                <h4>Ed ora...</h4>
+                <h5>PHOTOREALISTIC</h5>
+                <h6>Ed ecco all'ultimo step del mio percorso: la creazione di scene e oggetti fotorealistici. Integrando
+                    modelli dettagliati con luci, materiali e ambientazioni curate nei minimi dettagli, ho cercato di
+                    portare le mie creazioni al livello successivo
+                </h6>
+            </section>
+            <section id="imageSection6">
+                <div class="footerElement">
+                    <img src="images/furniture.jpg" alt="">
+                    <p class="tagWhite">Arredo</p>
+                </div>
+                <div class="footerElement">
+                    <img src="images/bathroom.jpg" alt="">
+                    <p class="tagWhite">Toilette</p>
+                </div>
+                <div class="footerElement">
+                    <img src="images/rolexDef.jpg" alt="">
+                    <p class="tagWhite">Orologio</p>
+                </div>
+            </section>
+        </div>
     </div>
 
-    <div id="secondSection">
-
-      <div id="leftComponent2">
-
-        <div id="title2">
-          <div class="trapezoid"></div>
-          <h2>Il primo approccio...</h2>
-        </div>
-        <div id="subtitle2">
-          <h3>MESH LOW POLY</h3>
-        </div>
-        <div class="descrizione" id="descrizione2">
-          <h4>
-            Questi primi progetti rappresentano le fondamenta del mio percorso,
-            dove ho imparato a manipolare forme e texture, diventando familiare con l’interfaccia di Blender.
-          </h4>
-
-        </div>
-      </div>
-      <div id="rightComponent2">
-        <img src="images\lowpoly.png" alt="">
-        <div class="tagWhite">
-          <h5>Game Assets - Taverna</h5>
-        </div>
-      </div>
-    </div>
-
-    <div id="thirdSection">
-
-      <div id="subtitle3">
-        <img src="images/scroll.png" alt="" style="position: absolute; top: 60px; left: 20%; width: 50px; height: 50px;">
-        <p style="position: absolute; top: 100px; left: 19%; font-family: Poppins; font-weight: 500;">Try to Scroll</p>
-        <h3>CREAZIONE DI SCENARI PIù COMPLESSI</h3>
-      </div>
-      <div id="slider">
-        <div class="sliderComponent">
-          <img src="images\palafitta.png" alt="">
-          <div class="tagBlack">
-            <h5>Low Poly - Palafitta</h5>
-          </div>
-        </div>
-
-        <div class="sliderComponent">
-          <img src="images\forgeWorkbench.jpg" alt="">
-          <div class="tagBlack">
-            <h5>Game Assets - Forgia Nanica</h5>
-          </div>
-        </div>
-
-        <div class="sliderComponent">
-          <img src="images\forgeCyc.jpg" alt="">
-          <div class="tagBlack">
-            <h5>Game Assets - Forgia Nanica Textured</h5>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div id="fourthSection">
-
-      <div id="title4">
-        <div class="trapezoid"></div>
-        <h2>Primi progetti...</h2>
-      </div>
-      <div id="subtitle4">
-        <h3>HIGH POLY MESH</h3>
-      </div>
-      <div class="descrizione" id="descrizione4">
-        <h4>
-          Dopo aver sperimentato con i modelli low poly, il mio prossimo passo è stato immergermi nella creazione di
-          oggetti molto più dettagliati,
-          come questa replica del mio PC. Un modo per affinare le mie abilità nella modellazione, aprendo la strada a
-          una nuova sperimentazione.
-        </h4>
-        <img src="images/click.png" alt="" style="position: absolute; top: 45%; left: 115%; width: 50px; height: 50px;">
-        <p style="position: absolute; top: 65%; left: 115%; font-family: Poppins; font-weight: 500;">..Click?</p>
-
-      </div>
-      <div id="pcContainer">
-
-        <div class="pcComponent">
-          <img src="images\PC3-HR.jpg" alt="" class="image">
-        </div>
-        <div class="pcComponent">
-          <img src="images\pc.jpg" alt="" class="image">
-        </div>
-        <div class="pcComponent">
-          <img src="images\pc2.jpg" alt="" class="image">
-        </div>
-      </div>
-      <div class="tagWhite">
-        <h5>High Poly - PC da gaming</h5>
-      </div>
-    </div>
-
-    <div id="fifthSection">
-      <div id="leftComponent5">
-        <img src="images\materials.png" alt="">
-        <div class="tagBlack">
-          <h5>Materials Test - Plastic, Fabric, Paint, Glass </h5>
-        </div>
-      </div>
-      <div id="rightComponent5">
-        <div id="subtitle5">
-          <h3>MATERIALI</h3>
-        </div>
-        <div id="descrizione5">
-          <h4>Successivamente, sono passato alla creazione di materiali custom, per realizzare in modo ancora più
-            personalizzato e fedele i miei progetti.</h4>
-        </div>
-      </div>
-    </div>
-
-    <div id="sixthSection">
-      <div id="title6">
-        <div class="trapezoid"></div>
-        <h2>Ed ora...</h2>
-      </div>
-      <div id="subtitle6">
-        <h3>PHOTOREALISTIC</h3>
-      </div>
-      <div class="descrizione" id="descrizione6">
-        <h4>
-          Ed ecco all'ultimo step del mio percorso: la creazione di scene e oggetti fotorealistici.
-          Integrando modelli dettagliati con luci, materiali e ambientazioni curate nei minimi dettagli, ho cercato di
-          portare le mie creazioni al livello successivo
-        </h4>
-      </div>
-      <div id="realisticContainer">
-        <div class="realisticClass">
-          <img src="images\fornitures.jpg" alt="">
-          <div class="tagWhite">
-            <h5>Fornitures</h5>
-          </div>
-        </div>
-        <div class="realisticClass">
-          <img src="images\bathroom.jpg" alt="">
-          <div class="tagWhite">
-            <h5>Bathroom</h5>
-          </div>
-        </div>
-        <div class="realisticClass">
-          <img src="images\rolexDef.jpg" alt="">
-          <div class="tagWhite">
-            <h5>Watch</h5>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <script type="module" src="bundle.js"></script>
 </body>
+<script type="module" src="bundle.js"></script>
 
 </html>
