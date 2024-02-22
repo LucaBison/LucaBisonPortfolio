@@ -1,0 +1,110 @@
+npm install -g npm
+npm install --location=global typescript
+
+non so se usare questo, dovrebbe essere solo per la versione (tsc -v) 
+
+npm init 
+npm install three --save-dev
+
+crea cartelle
+dist
+	client
+		index.html
+	server
+src 	
+	client 
+		client.ts
+	server
+
+
+./src/client/tsconfig.json
+	tsconfig.json
+
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "moduleResolution": "node",
+        "strict": true
+    },
+    "include": ["**/*.ts"]
+}
+
+
+npm install @types/three --save-dev
+npm install webpack webpack-cli webpack-dev-server ts-loader --save-dev
+npm install typescript --save-dev
+
+./src/client/webpack.common.js
+	webpack.common.js
+
+const path = require('path')
+
+module.exports = {
+    entry: './src/client/client.ts',
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+        ],
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, '../../dist/client'),
+    },
+}
+
+./src/client/webpack.dev.js
+
+const { merge } = require('webpack-merge')
+const common = require('./webpack.common.js')
+const path = require('path')
+
+module.exports = merge(common, {
+    mode: 'development',
+    devtool: 'eval-source-map',
+    devServer: {
+        static: {
+            directory: path.join(__dirname, '../../dist/client'),
+        },
+        hot: true,
+    },
+})
+
+
+
+ADD TO SCRIPTS IN package.json
+"dev": "webpack serve --config ./src/client/webpack.dev.js",
+
+TEST 
+npm run dev
+
+./src/client/webpack.prod.js
+	webpack.prod.js
+
+const { merge } = require('webpack-merge')
+const common = require('./webpack.common.js')
+
+module.exports = merge(common, {
+    mode: 'production',
+    performance: {
+        hints: false,
+    },
+})
+
+
+ADD TO SCRIPTS IN package.json
+"build": "webpack --config ./src/client/webpack.prod.js",
+
+
+BUILD 
+npm run build
+
+
+** LINK **
+https://www.udemy.com/course/threejs-tutorials/learn/lecture/27876286#overview
