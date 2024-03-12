@@ -111,6 +111,7 @@ h6 {
 }
 
 #div2 h4,
+#div7 h4,
 h5 {
     text-align: center;
 }
@@ -218,12 +219,14 @@ h5 {
     text-align: center;
 }
 
-#textSection5 h5 {
+#textSection5 h5,
+#textSection7 h6{
     margin-top: 0;
     margin-bottom: 0;
 }
 
-#textSection5 h6 {
+#textSection5 h6,
+#textSection7 h6{
     width: 90%;
     margin-top: 2vh;
     margin-left: auto;
@@ -247,7 +250,7 @@ h5 {
 }
 
 #textSection6 h5 {
-    margin-top: 0;
+    margin-top: 5vh;
     margin-bottom: 0;
 }
 
@@ -264,15 +267,35 @@ h5 {
     flex-direction: column;
 }
 
+#div7 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+
+#videoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.videoSection {
+    width: 95%;
+    margin-bottom: 10px;
+    height: auto;
+}
 footer {
-    margin-top: 10vh;
-    margin-bottom: 5vh;
-    border-top: 1px solid #ff4d00;
+    text-align: center;
+    height: 15vh;
+    padding-top: 7.5vh;
     color: #f2f2f2;
     background-color: black;
 }
 
-.footerElement {
+.furnitureElement {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -280,7 +303,7 @@ footer {
     margin-bottom: 10px;
 }
 
-.footerElement img {
+.furnitureElement img {
     width: 100%;
     height: auto;
 }
@@ -314,9 +337,10 @@ footer {
     header {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-top: 5vh;
-        margin-left: 0;
+        margin-left: 15%;
+        margin-right: 15%;
     }
 
     h1 {
@@ -368,13 +392,15 @@ footer {
         margin-top: 5vh;
     }
 
-    #textSection2 {
+    #textSection2
+    {
         display: flex;
         height: 90%;
         flex-direction: column;
     }
 
-    #textSection2 h4 {
+    #textSection2 h4
+   {
         width: 80%;
         margin-left: 25%;
         text-align: left;
@@ -551,21 +577,22 @@ footer {
         margin: auto;
     }
     
-    #textSection5 {
+    #textSection5
+    {
         order: 2;
         width: 90%;
         color: black;
         text-align: center;
     }
     
-    #textSection5 h5{
+    #textSection5 h5 {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
         text-align: left;
     }
 
-    #textSection5 h6{
+    #textSection5 h6 {
         text-align: left;
     }
     
@@ -585,12 +612,19 @@ footer {
         justify-content: space-around;
     }
 
-    .footerElement {
+    .furnitureElement {
         width: auto;
         margin: 15px;
     }
 
-    footer {
+    #videoSection {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 
+    .videoSection {
+        width: 30%;
+        margin-bottom: 10px;
+        height: auto;
     }
 }
