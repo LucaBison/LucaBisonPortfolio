@@ -15,6 +15,11 @@ header {
     margin-left: 5%;
 }
 
+a {
+    text-decoration: none;
+    color: #ff4d00;
+}
+
 header p {
     font-weight: 400;
     font-size: 1em;
@@ -65,6 +70,7 @@ h6 {
     width: 90vw;
     flex-direction: column;
     margin: auto;
+    margin-bottom: 10vh;
 }
 
 #canvasSection1 {
@@ -105,6 +111,7 @@ h6 {
 }
 
 #div2 h4,
+#div7 h4,
 h5 {
     text-align: center;
 }
@@ -212,12 +219,14 @@ h5 {
     text-align: center;
 }
 
-#textSection5 h5 {
+#textSection5 h5,
+#textSection7 h6{
     margin-top: 0;
     margin-bottom: 0;
 }
 
-#textSection5 h6 {
+#textSection5 h6,
+#textSection7 h6{
     width: 90%;
     margin-top: 2vh;
     margin-left: auto;
@@ -241,7 +250,7 @@ h5 {
 }
 
 #textSection6 h5 {
-    margin-top: 0;
+    margin-top: 5vh;
     margin-bottom: 0;
 }
 
@@ -258,7 +267,35 @@ h5 {
     flex-direction: column;
 }
 
-.footerElement {
+#div7 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+
+#videoSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.videoSection {
+    width: 95%;
+    margin-bottom: 10px;
+    height: auto;
+}
+footer {
+    text-align: center;
+    height: 15vh;
+    padding-top: 7.5vh;
+    color: #f2f2f2;
+    background-color: black;
+}
+
+.furnitureElement {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -266,7 +303,7 @@ h5 {
     margin-bottom: 10px;
 }
 
-.footerElement img {
+.furnitureElement img {
     width: 100%;
     height: auto;
 }
@@ -276,8 +313,8 @@ h5 {
     border-radius: 10px;
     border: solid 1px #f2f2f2;
     font-size: 0.7rem;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
 }
 
 
@@ -286,8 +323,8 @@ h5 {
     border-radius: 10px;
     border: solid 1px black;
     font-size: 0.7rem;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
 }
 
 
@@ -300,9 +337,10 @@ h5 {
     header {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-top: 5vh;
-        margin-left: 0;
+        margin-left: 15%;
+        margin-right: 15%;
     }
 
     h1 {
@@ -319,17 +357,20 @@ h5 {
 
     #div1 {
         width: 100vw;
+        height: 100vh;
         margin-top: 5vh;
         flex-direction: row;
     }
 
     #textSection1 {
         width: 35vw;
+        margin-top: 20vh;
         margin-left: 15%;
     }
 
     #canvasSection1 {
         width: 40vw;
+        justify-items: center;
     }
 
     #canvasSection1 img {
@@ -346,21 +387,24 @@ h5 {
 
     #div2 {
         width: 100vw;
-        min-height: 60vh;
-        height: auto;
+        height: 80vh;
         flex-direction: row;
         margin-top: 5vh;
     }
 
-    #textSection2 {
+    #textSection2
+    {
         display: flex;
+        height: 90%;
         flex-direction: column;
     }
 
-    #textSection2 h4 {
-        width: 90%;
-        margin-left: 30%;
-        margin-top: -20%;
+    #textSection2 h4
+   {
+        width: 80%;
+        margin-left: 25%;
+        text-align: left;
+        margin-bottom: 10vh;
     }
 
     #textSection2 h5 {
@@ -384,14 +428,24 @@ h5 {
         width: 60%;
     }
 
+    #div3 {
+        width: 100vw;
+        min-height: 70vh;
+    }
+
+    #div3 h5{
+        padding-top: 5vh;
+    }
+
     #slider {
         display: flex;
         white-space: nowrap;
         flex-direction: row;
-        margin-top: 2vh;
+        margin-top: 10vh;
+        margin-bottom: 15vh;
         margin-left: 5vw;
         overflow-x: scroll;
-        scrollbar-width: 10px;
+        padding-bottom: 20px;
     }
 
     .sliderElement {
@@ -406,9 +460,10 @@ h5 {
     
     #div4 {
         width: 100vw;
-        height: auto;
+        min-height: 80vh;
         flex-direction: column;
         margin-top: 5vh;
+        padding-bottom: 10vh;
     }
 
     #textSection4 {
@@ -417,10 +472,11 @@ h5 {
     }
 
     #textSection4 h4 {
-        width: 90%;
+        width: 80%;
         margin-top: 5vh;
         text-align: right;
-        margin-right: 30%;
+        margin-right: 15%;
+        margin-left: auto;
     }
 
     #textSection4 h5 {
@@ -432,7 +488,7 @@ h5 {
     }
 
     #textSection4 h6 {
-        width: 80%;
+        width: 50%;
         text-align: right;
         margin-right: 15%;
         margin-left: auto;
@@ -501,6 +557,7 @@ h5 {
         flex-direction: row;
         align-items: center;
         width: 100vw;
+        min-height: 60vh;
         margin: auto;
         margin-top: 5vh;
         background-color: #f2f2f2;
@@ -520,24 +577,34 @@ h5 {
         margin: auto;
     }
     
-    #textSection5 {
+    #textSection5
+    {
         order: 2;
         width: 90%;
         color: black;
         text-align: center;
     }
     
-    #textSection5 h5{
+    #textSection5 h5 {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
         text-align: left;
     }
 
-    #textSection5 h6{
+    #textSection5 h6 {
         text-align: left;
     }
     
+    #div6 {
+        width: 100vw;
+        min-height: 80vh;
+        padding-top: 5vh;
+    }
+
+    #div6 h4 {
+        margin-bottom: 10vh;
+    }
     #imageSection6 {
         display: flex;
         align-items:flex-start;
@@ -545,8 +612,19 @@ h5 {
         justify-content: space-around;
     }
 
-    .footerElement {
+    .furnitureElement {
         width: auto;
         margin: 15px;
+    }
+
+    #videoSection {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .videoSection {
+        width: 30%;
+        margin-bottom: 10px;
+        height: auto;
     }
 }
