@@ -99,7 +99,8 @@ h6 {
 
 
 #div2,
-#div4 {
+#div4, 
+#div7 {
     display: flex;
     width: 100vw;
     flex-direction: column;
@@ -131,6 +132,17 @@ h5 {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+#imageSection1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#imageSection1 img {
+    margin-top: 5vh;
+    width: 50%;
 }
 
 #imageSection2 img {
@@ -267,7 +279,7 @@ h5 {
     flex-direction: column;
 }
 
-#div7 {
+#div8 {
     width: 100vw;
     display: flex;
     flex-direction: column;
