@@ -134,6 +134,8 @@ function HeadphonesCanvas() {
 export function App() {
     const { i18n, t } = useTranslation();
     const [enlargedImage, setEnlargedImage] = useState<MediaItem | null>(null);
+    const [isHeaderVisible, setHeaderVisible] = useState(true);
+    const lastScrollY = useRef(0);
     const cvHref = i18n.resolvedLanguage === 'en' ? 'CV_ENG.pdf' : 'CV_ITA.pdf';
     const gameReadyAssets: MediaItem[] = [
         { src: assets.image('palafitta.png'), alt: t('projects.ready.hut'), tag: t('projects.ready.hutTag') },
@@ -147,9 +149,29 @@ export function App() {
     ];
     const pcImages: MediaItem[] = ['PC3-HR.jpg', 'pc.jpg', 'pc2.jpg'].map((src) => ({ src: assets.image(src), alt: t('projects.highPoly.imageAlt') }));
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            const delta = currentScrollY - lastScrollY.current;
+
+            if (currentScrollY < 24) {
+                setHeaderVisible(true);
+            } else if (delta > 8) {
+                setHeaderVisible(false);
+            } else if (delta < -8) {
+                setHeaderVisible(true);
+            }
+
+            lastScrollY.current = currentScrollY;
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
         <>
-            <header className="site-header">
+            <header className={`site-header ${isHeaderVisible ? '' : 'site-header--hidden'}`}>
                 <p>Portfolio | Luca Bison<br /><br /><a href="#games">{t('nav.games')}</a><br /><a href="#modelling">{t('nav.modelling')}</a></p>
                 <div className="site-header__contact"><p>lucabison.lb@gmail.com<br />+39 340 214 89 19<br /><ExternalLink href={cvHref} download>{t('nav.cv')}</ExternalLink><br /><ExternalLink href="recommendationLetter.pdf" download>{t('nav.recommendation')}</ExternalLink></p><div className="language-switcher" aria-label="Language selector"><button type="button" className={i18n.language === 'it' ? 'is-active' : ''} onClick={() => i18n.changeLanguage('it')}>IT</button><button type="button" className={i18n.language === 'en' ? 'is-active' : ''} onClick={() => i18n.changeLanguage('en')}>EN</button></div></div>
             </header>
