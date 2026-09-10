@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Webpack build artifacts (the public HTML, CSS and media assets are versioned)
+dist/client/bundle.js
+dist/client/bundle.js.LICENSE.txt
+
+# Tooling caches
+.cache/
+.webpack/
+*.tsbuildinfo
+
+# Test output
+coverage/
+
+# Local environment and logs
+.env
+.env.*
+!.env.example
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Operating-system files
+.DS_Store
+Thumbs.db
