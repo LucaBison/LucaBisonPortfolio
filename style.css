@@ -669,3 +669,48 @@ footer {
         height: auto;
     }
 }
+
+.project-section--has-role {
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 3.5rem;
+}
+
+.project-section__role {
+    position: absolute;
+    top: 50%;
+    left: 1.1rem;
+    margin: 0;
+    color: inherit;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-orientation: mixed;
+    writing-mode: vertical-rl;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.hero__role {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.hero__role img {
+    flex: 0 0 auto;
+    width: 1.15em;
+    height: 1.15em;
+}
+
+@media screen and (min-width: 768px) {
+    .project-section--has-role {
+        padding-left: calc(8% + 2.5rem);
+    }
+
+    .project-section__role {
+        left: 3%;
+        font-size: 0.85rem;
+    }
+}
