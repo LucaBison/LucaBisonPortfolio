@@ -136,7 +136,7 @@ export function App() {
     const [enlargedImage, setEnlargedImage] = useState<MediaItem | null>(null);
     const [isHeaderVisible, setHeaderVisible] = useState(true);
     const lastScrollY = useRef(0);
-    const cvHref = i18n.resolvedLanguage === 'en' ? 'CV_ENG.pdf' : 'CV_ITA.pdf';
+    const cvHref = i18n.resolvedLanguage === 'en' ? 'CV_LucaBison_EN.pdf' : 'CV_LucaBison_IT.pdf';
     const gameReadyAssets: MediaItem[] = [
         { src: assets.image('palafitta.png'), alt: t('projects.ready.hut'), tag: t('projects.ready.hutTag') },
         { src: assets.image('forgeWorkbench.jpg'), alt: t('projects.ready.forge'), tag: t('projects.ready.forgeTag') },

@@ -1,9 +1,10 @@
 # Dependencies
 node_modules/
 
-# Webpack build artifacts (the public HTML, CSS and media assets are versioned)
-dist/client/bundle.js
-dist/client/bundle.js.LICENSE.txt
+# Generated site output
+/dist/
+/bundle.js
+/bundle.js.LICENSE.txt
 
 # Tooling caches
 .cache/
